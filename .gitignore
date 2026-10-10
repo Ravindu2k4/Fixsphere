@@ -1,0 +1,22 @@
+# Visual Studio temporary and build files
+.vs/
+*.user
+*.suo
+x64/
+Debug/
+Release/
+FixSphere/x64/
+FixSphere/Debug/
+FixSphere/Release/
+ExportedApp/
+*.obj
+*.pdb
+*.tlog
+*.idb
+*.ipch
+*.log
+*.metagen
+
+# FixSphere Database Credentials (keep local only)
+db_config.ini
+FixSphere/db_config.ini
