@@ -1,10 +1,10 @@
-# FixSphere — Mobile Phone Repair Center Management System
+# FixSphere - Mobile Phone Repair Center Management System
 ## Comprehensive University Software Development Documentation
 
 ---
 
 ### Project Information
-* **Application Title:** FixSphere — Mobile Phone Repair Center Management System
+* **Application Title:** FixSphere - Mobile Phone Repair Center Management System
 * **Target Audience:** University Examination & Software Assessment Board
 * **Development Platform:** Microsoft Windows Desktop (x64)
 * **Framework:** C++/CLI on .NET Framework v4.7.2
