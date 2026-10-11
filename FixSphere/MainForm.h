@@ -2,6 +2,7 @@
 
 #include "DatabaseService.h"
 #include "UserSession.h"
+#include "Models.h"
 
 namespace FixSphere {
 
