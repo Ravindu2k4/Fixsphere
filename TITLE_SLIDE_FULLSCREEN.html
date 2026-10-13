@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FixSphere - Title Slide</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 80% 20%, #1e3a8a 0%, #0f172a 60%, #020617 100%);
+    color: #f8fafc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 35px 55px;
+    overflow: hidden;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgba(56, 189, 248, 0.3);
+    padding-bottom: 14px;
+  }
+  .uni-info h2 {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #94a3b8;
+    text-transform: uppercase;
+  }
+  .uni-info p {
+    font-size: 15px;
+    color: #38bdf8;
+    font-weight: 600;
+    margin-top: 2px;
+  }
+  .badge {
+    background: rgba(56, 189, 248, 0.15);
+    border: 1px solid #38bdf8;
+    color: #38bdf8;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .hero {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .hero h1 {
+    font-size: 56px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #ffffff 30%, #38bdf8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 40px rgba(56, 189, 248, 0.4);
+  }
+  .hero h3 {
+    font-size: 21px;
+    font-weight: 500;
+    color: #cbd5e1;
+    margin-top: 6px;
+  }
+  .hero .sub-tag {
+    font-size: 13.5px;
+    color: #0ea5e9;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-top: 5px;
+  }
+  .team-card {
+    background: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    border-radius: 12px;
+    padding: 16px 26px;
+    max-width: 920px;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.6);
+  }
+  .team-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #38bdf8;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+  }
+  th {
+    text-align: left;
+    padding: 6px 14px;
+    color: #64748b;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+  }
+  td {
+    padding: 8px 14px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+    color: #e2e8f0;
+  }
+  tr:last-child td {
+    border-bottom: none;
+  }
+  .highlight-name {
+    font-weight: 600;
+    color: #ffffff;
+  }
+  .tech-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(148, 163, 184, 0.2);
+    padding-top: 12px;
+    font-size: 12.5px;
+    color: #64748b;
+  }
+  .tags {
+    display: flex;
+    gap: 12px;
+  }
+  .tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 10px;
+    border-radius: 6px;
+    color: #94a3b8;
+    font-weight: 600;
+  }
+</style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="uni-info">
+      <h2>Rajarata University of Sri Lanka</h2>
+      <p>Department of Computing &bull; ICT 1306: Object Oriented Programming</p>
+    </div>
+    <div class="badge">Group Assignment</div>
+  </div>
+
+  <div class="hero">
+    <h1>FixSphere</h1>
+    <h3>Mobile Phone Repair Center Management System</h3>
+    <div class="sub-tag">5-Minute Live Application Demonstration</div>
+  </div>
+
+  <div class="team-card">
+    <div class="team-title">Project Development Team</div>
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Student Name</th>
+          <th>Index Number</th>
+          <th>Registration Number</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="highlight-name">K. R. M. De Silva</td>
+          <td>6675</td>
+          <td>ICT/2024/063</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="highlight-name">S. P. Abewickrama</td>
+          <td>6618</td>
+          <td>ICT/2024/003</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="highlight-name">D. L. C. A. Liyanawaduge</td>
+          <td>6685</td>
+          <td>ICT/2024/078</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="highlight-name">K. W. R. Adithya</td>
+          <td>6620</td>
+          <td>ICT/2024/006</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td class="highlight-name">M. J. Apeksha</td>
+          <td>6628</td>
+          <td>ICT/2024/014</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tech-footer">
+    <div class="tags">
+      <span class="tag">C++/CLI (WinForms)</span>
+      <span class="tag">MySQL 8.0</span>
+      <span class="tag">OOP Architecture</span>
+      <span class="tag">LKR Currency</span>
+    </div>
+    <div>GitHub: <strong>github.com/Ravindu2k4/Fixsphere</strong></div>
+  </div>
+
+</body>
+</html>

@@ -25,11 +25,11 @@
 
 | # | Student Full Name | Index Number | Registration Number | Primary Responsibility / Contribution |
 |---|-------------------|--------------|---------------------|----------------------------------------|
-| 1 | `[Member 1 Name]` | `[Index 1]`  | `[Reg 1]`           | Project Lead, System Architecture, Database Schema Design |
-| 2 | `[Member 2 Name]` | `[Index 2]`  | `[Reg 2]`           | Windows Forms GUI Design, Navigation & Layout Styling |
-| 3 | `[Member 3 Name]` | `[Index 3]`  | `[Reg 3]`           | OOP Domain Modeling (`Person`, `Customer`, `Employee`) |
-| 4 | `[Member 4 Name]` | `[Index 4]`  | `[Reg 4]`           | Role-Based Authorization & Workflow Security Logic |
-| 5 | `[Member 5 Name]` | `[Index 5]`  | `[Reg 5]`           | Financial Calculations (LKR), Reporting & Video Presentation |
+| 1 | K. R. M. De Silva | 6675 | ICT/2024/063 | Project Lead, System Architecture, Database Schema Design |
+| 2 | S. P. Abewickrama | 6618 | ICT/2024/003 | Windows Forms GUI Design, Navigation & Layout Styling |
+| 3 | D. L. C. A. Liyanawaduge | 6685 | ICT/2024/078 | OOP Domain Modeling (`Person`, `Customer`, `Employee`) |
+| 4 | K. W. R. Adithya | 6620 | ICT/2024/006 | Role-Based Authorization & Workflow Security Logic |
+| 5 | M. J. Apeksha | 6628 | ICT/2024/014 | Financial Calculations (LKR), Reporting & Video Presentation |
 
 ---
 
