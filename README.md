@@ -1,4 +1,4 @@
-# FixSphere — Mobile Phone Repair Center Management System
+# FixSphere - Mobile Phone Repair Center Management System
 
 FixSphere is an enterprise-grade Windows desktop management system designed for mobile phone repair centers. Built with **C++/CLI (.NET Windows Forms)** and backed by **MySQL 8.0**, it provides secure role-based access control (RBAC), end-to-end repair job tracking, customer relationship management, and financial analytics.
 
@@ -7,9 +7,9 @@ FixSphere is an enterprise-grade Windows desktop management system designed for 
 ## 🌟 Key Features
 
 * **Role-Based Access Control (RBAC)**:
-  * **Admin**: Complete system control — job creation, assigning repairers, updating statuses, deleting records, managing staff accounts, and financial reporting.
-  * **Checker**: Front-desk operations — registering customers, creating repair intake jobs, searching jobs and viewing statuses. Restricted from updating statuses or assigning jobs.
-  * **Repairer**: Technician workbench — view only jobs assigned to their account, update progress/statuses, and record technical problem details and notes.
+  * **Admin**: Complete system control - job creation, assigning repairers, updating statuses, deleting records, managing staff accounts, and financial reporting.
+  * **Checker**: Front-desk operations - registering customers, creating repair intake jobs, searching jobs and viewing statuses. Restricted from updating statuses or assigning jobs.
+  * **Repairer**: Technician workbench - view only jobs assigned to their account, update progress/statuses, and record technical problem details and notes.
 * **Repair Lifecycle Tracking**:
   * Workflows: `Pending` $\rightarrow$ `In Progress` $\rightarrow$ `Finished` / `Couldn't Repair`.
   * Automatic business rule enforcement (e.g. `Couldn't Repair` enforces LKR 0.00 cost).
