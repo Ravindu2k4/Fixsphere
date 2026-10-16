@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>FixSphere - ICT 1306 Assignment Report</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 18mm 16mm 18mm 16mm;
+  }
+  body {
+    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+    color: #1e293b;
+    line-height: 1.55;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    font-size: 10.5pt;
+  }
+  .page-break {
+    page-break-after: always;
+  }
+  h1, h2, h3, h4 {
+    color: #0f172a;
+    margin-top: 0;
+  }
+  h1 { font-size: 19pt; font-weight: 800; color: #1e3a8a; margin-bottom: 4px; }
+  h2 { font-size: 13pt; font-weight: 700; color: #1e40af; border-bottom: 2px solid #e2e8f0; padding-bottom: 4px; margin-top: 18px; margin-bottom: 10px; }
+  h3 { font-size: 11pt; font-weight: 700; color: #0369a1; margin-top: 10px; margin-bottom: 4px; }
+  
+  /* Header & Cover */
+  .header-box {
+    text-align: center;
+    border-bottom: 3px solid #2563eb;
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+  }
+  .uni-title {
+    font-size: 13pt;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .sub-title {
+    font-size: 11pt;
+    color: #2563eb;
+    font-weight: 600;
+  }
+  
+  /* Tables */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0 14px 0;
+    font-size: 9.5pt;
+  }
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 6px 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f1f5f9;
+    color: #334155;
+    font-weight: 700;
+  }
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  /* Info / Alert cards */
+  .card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #2563eb;
+    border-radius: 4px;
+    padding: 10px 14px;
+    margin: 10px 0;
+    font-size: 9.8pt;
+  }
+  .card-links {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-left: 4px solid #3b82f6;
+    padding: 10px 14px;
+    margin: 10px 0;
+  }
+  
+  /* Code blocks */
+  pre {
+    background: #0f172a;
+    color: #f8fafc;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-family: 'Consolas', 'Courier New', monospace;
+    font-size: 8.8pt;
+    line-height: 1.45;
+    overflow-x: auto;
+    margin: 6px 0 12px 0;
+  }
+  .code-keyword { color: #38bdf8; font-weight: bold; }
+  .code-type { color: #4ade80; }
+  .code-comment { color: #94a3b8; font-style: italic; }
+  .code-string { color: #fde047; }
+  
+  /* Diagram Box */
+  .diagram-box {
+    background: #f8fafc;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font-family: 'Consolas', monospace;
+    font-size: 8pt;
+    line-height: 1.35;
+    white-space: pre;
+    color: #0f172a;
+    margin: 10px 0;
+  }
+  
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 8pt;
+    font-weight: 700;
+    border-radius: 4px;
+    color: #ffffff;
+    background: #2563eb;
+  }
+</style>
+</head>
+<body>
+
+<!-- ==========================================
+     PAGE 1: COVER & OVERVIEW
+=========================================== -->
+<div class="header-box">
+  <div class="uni-title">Rajarata University of Sri Lanka</div>
+  <div style="font-size: 11pt; color: #64748b; margin: 2px 0;">Department of Computing &bull; Faculty of Applied Sciences</div>
+  <div class="sub-title">ICT 1306 &mdash; Object Oriented Programming (Group Assignment)</div>
+  <h1 style="margin-top: 8px;">FixSphere: Mobile Phone Repair Center Management System</h1>
+  <div style="font-size: 10pt; color: #475569;">Desktop Application Built with C++/CLI (Windows Forms) &amp; MySQL Database</div>
+</div>
+
+<div class="card-links">
+  <strong>Key Submission Links:</strong><br>
+  &bull; <strong>GitHub Repository URL:</strong> <a href="https://github.com/Ravindu2k4/Fixsphere" style="color: #1d4ed8; font-weight: 600;">https://github.com/Ravindu2k4/Fixsphere</a> (Publicly Accessible)<br>
+  &bull; <strong>5-Minute Live Video Demo (YouTube Unlisted):</strong> <a href="https://youtu.be/EXAMPLE_UNLISTED_LINK" style="color: #1d4ed8; font-weight: 600;">https://youtu.be/EXAMPLE_UNLISTED_LINK</a>
+</div>
+
+<h2>1. Team &amp; Scenario Details</h2>
+
+<h3>1.1 Team Member Details (Team of 5)</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;">#</th>
+      <th style="width: 32%;">Student Full Name</th>
+      <th style="width: 18%;">Index Number</th>
+      <th style="width: 20%;">Registration Number</th>
+      <th style="width: 25%;">Assigned Role &amp; Contribution</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><strong>K. R. M. De Silva</strong></td>
+      <td>6675</td>
+      <td>ICT/2024/063</td>
+      <td>Project Leader, System Architecture, Database Schema</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><strong>S. P. Abewickrama</strong></td>
+      <td>6618</td>
+      <td>ICT/2024/003</td>
+      <td>Windows Forms UI, Navigation, Dashboard Layout</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td><strong>D. L. C. A. Liyanawaduge</strong></td>
+      <td>6685</td>
+      <td>ICT/2024/078</td>
+      <td>OOP Domain Classes (Person, Customer, Employee)</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td><strong>K. W. R. Adithya</strong></td>
+      <td>6620</td>
+      <td>ICT/2024/006</td>
+      <td>Role Permissions, Status Updates, CRUD Logic</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td><strong>M. J. Apeksha</strong></td>
+      <td>6628</td>
+      <td>ICT/2024/014</td>
+      <td>LKR Currency Calculations, Monthly Reports, Testing</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>1.2 Chosen Business Scenario</h3>
+<p>
+  We selected a <strong>Mobile Phone Repair and Servicing Center</strong> named <strong>FixSphere</strong>.
+  In this business, customers bring broken mobile phones (broken screens, battery drainage, water damage, port issues). 
+  FixSphere manages the complete intake, diagnosis, repair assignment, and billing process.
+</p>
+<div class="card">
+  <strong>The Problem with Manual Systems:</strong> Small repair shops often use paper notebooks. This leads to lost customer contact numbers, confusion about which technician is repairing which phone, mistakes in billing, and no security permissions between front-desk staff and technicians.
+  <br><br>
+  <strong>FixSphere Desktop Solution:</strong> A multi-role desktop application built in Visual Studio using C++/CLI and a real MySQL database. It secures the business through 3 roles:
+  <ul style="margin: 4px 0 0 16px; padding: 0;">
+    <li><strong>Admin:</strong> Has full control &mdash; can register users, assign jobs to technicians, delete jobs, and view total revenue reports.</li>
+    <li><strong>Checker:</strong> Front-desk staff &mdash; registers customers, takes in new phone repair jobs, and searches records. Cannot change repair statuses or assign jobs.</li>
+    <li><strong>Repairer:</strong> Technician &mdash; can only see and update jobs assigned to their own account, set diagnoses, and input repair costs in Sri Lankan Rupees (LKR).</li>
+  </ul>
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 2: CLASS LIST & RESPONSIBILITIES
+=========================================== -->
+<h2>2. Class List and Responsibilities</h2>
+<p>
+  To meet the assignment requirements, our project contains modular classes separating the user interface, the business entities, and database communication.
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 20%;">Class Name</th>
+      <th style="width: 18%;">File Location</th>
+      <th style="width: 62%;">Responsibilities &amp; Key Methods</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Person</strong><br><span class="badge">Abstract Class</span></td>
+      <td><code>Models.h</code></td>
+      <td>
+        Acts as the base template for any person in the system.<br>
+        &bull; Holds common private data: <code>id</code>, <code>name</code>, <code>contact</code>, <code>nic</code>.<br>
+        &bull; Encapsulates them with public properties (get/set).<br>
+        &bull; Declares pure abstract method: <code>virtual String^ GetRoleDescription() = 0;</code>.<br>
+        &bull; Provides base summary method: <code>virtual String^ GetSummary();</code>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Customer</strong><br><span class="badge">Derived Class</span></td>
+      <td><code>Models.h</code></td>
+      <td>
+        Inherits from <code>Person</code>.<br>
+        &bull; Represents a client who brings a phone for repair.<br>
+        &bull; Adds customer-specific data: <code>address</code>.<br>
+        &bull; Overrides <code>GetRoleDescription()</code> to return customer role details.<br>
+        &bull; Overrides <code>GetSummary()</code> to include home address.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Employee</strong><br><span class="badge">Derived Class</span></td>
+      <td><code>Models.h</code></td>
+      <td>
+        Inherits from <code>Person</code>.<br>
+        &bull; Represents a staff member working in the shop.<br>
+        &bull; Adds employee-specific data: <code>role</code> (Admin/Checker/Repairer), <code>username</code>, <code>isActive</code>.<br>
+        &bull; Overrides <code>GetRoleDescription()</code> to return the staff designation.<br>
+        &bull; Overrides <code>GetSummary()</code> to include role and login username.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>UserSession</strong></td>
+      <td><code>UserSession.h</code></td>
+      <td>
+        Tracks the currently logged-in user in memory.<br>
+        &bull; Stores current employee ID, name, username, and role.<br>
+        &bull; Provides role-permission helper methods: <code>CanManageCustomers()</code>, <code>CanCreateJobs()</code>, <code>CanUpdateJobStatus()</code>, <code>CanAssignRepairer()</code>, <code>CanDeleteJobs()</code>.<br>
+        &bull; Provides <code>Logout()</code> to securely clear current session.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>DatabaseService</strong></td>
+      <td><code>DatabaseService.h</code></td>
+      <td>
+        Manages real MySQL database connectivity and security.<br>
+        &bull; Reads connection settings (host, port, user, password) from <code>db_config.ini</code>.<br>
+        &bull; Provides <code>GetConnection()</code> to open MySQL connections.<br>
+        &bull; Provides <code>ExecuteQuery()</code> returning safe <code>DataTable^</code>.<br>
+        &bull; Provides <code>ExecuteNonQuery()</code> for INSERT, UPDATE, DELETE operations.<br>
+        &bull; Encrypts passwords using standard SHA-256 algorithm.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>ComboItem</strong></td>
+      <td><code>MainForm.h</code></td>
+      <td>
+        Helper item for ComboBox dropdown controls.<br>
+        &bull; Stores an integer database ID (<code>Id</code>) and a human-readable name (<code>Display</code>).<br>
+        &bull; Overrides <code>ToString()</code> for polymorphic dropdown rendering.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>LoginForm</strong></td>
+      <td><code>LoginForm.h</code></td>
+      <td>
+        Authentication screen (Screen 1).<br>
+        &bull; Captures username and password.<br>
+        &bull; Hashes input with SHA-256 and verifies against <code>employees</code> table.<br>
+        &bull; Sets <code>UserSession::CurrentUser</code> on success.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>MainForm</strong></td>
+      <td><code>MainForm.h</code></td>
+      <td>
+        Main multi-tab dashboard (Screens 2 to 6).<br>
+        &bull; Houses views: Dashboard, Customers, Repair Jobs, Employees, Reports.<br>
+        &bull; Runs <code>ApplyRoleSecurity()</code> to hide/disable unauthorized buttons.<br>
+        &bull; Manages full CRUD operations and LKR financial summaries.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 3: OOP WORKED EXAMPLES (PART 1)
+=========================================== -->
+<h2>3. Worked Examples of Each OOP Pillar from FixSphere Code</h2>
+<p>
+  The assignment requires demonstrating all <strong>6 OOP concepts</strong> using real code written in our application:
+  (1) Class, (2) Object, (3) Encapsulation, (4) Abstraction, (5) Inheritance, and (6) Polymorphism.
+</p>
+
+<h3>3.1 Pillar 1: Class</h3>
+<div class="card">
+  <strong>Concept:</strong> A class is a blueprint or template that defines variables (attributes) and functions (behaviors).
+</div>
+<p><strong>Code Example from <code>Models.h</code>:</strong></p>
+<pre>
+<span class="code-comment">// Class blueprint for Customer inheriting common person details</span>
+<span class="code-keyword">public ref class</span> <span class="code-type">Customer</span> : <span class="code-keyword">public</span> <span class="code-type">Person</span>
+{
+<span class="code-keyword">private</span>:
+    <span class="code-type">String</span>^ address;
+
+<span class="code-keyword">public</span>:
+    <span class="code-comment">// Constructor initializing customer fields</span>
+    <span class="code-type">Customer</span>(<span class="code-keyword">int</span> id, <span class="code-type">String</span>^ name, <span class="code-type">String</span>^ contact, <span class="code-type">String</span>^ nic, <span class="code-type">String</span>^ address)
+        : <span class="code-type">Person</span>(id, name, contact, nic)
+    {
+        <span class="code-keyword">this</span>->address = address;
+    }
+
+    <span class="code-keyword">property</span> <span class="code-type">String</span>^ Address
+    {
+        <span class="code-type">String</span>^ <span class="code-keyword">get</span>() { <span class="code-keyword">return</span> address; }
+        <span class="code-keyword">void set</span>(<span class="code-type">String</span>^ value) { address = value; }
+    }
+};
+</pre>
+<p>
+  <strong>Explanation:</strong> The <code>Customer</code> class defines what data a customer holds (such as their home address) and what actions they can perform.
+</p>
+
+<h3>3.2 Pillar 2: Object</h3>
+<div class="card">
+  <strong>Concept:</strong> An object is an actual instance of a class created in computer memory during program execution using the <code>gcnew</code> keyword.
+</div>
+<p><strong>Code Example from <code>LoginForm.h</code> and <code>MainForm.h</code>:</strong></p>
+<pre>
+<span class="code-comment">// Creating a concrete UserSession object when an employee logs in</span>
+<span class="code-type">UserSession</span>^ session = <span class="code-keyword">gcnew</span> <span class="code-type">UserSession</span>(empId, fullName, username, role);
+<span class="code-type">UserSession</span>::CurrentUser = session;
+
+<span class="code-comment">// Creating a concrete Customer object dynamically in memory</span>
+<span class="code-type">Customer</span>^ custObj = <span class="code-keyword">gcnew</span> <span class="code-type">Customer</span>(1, <span class="code-string">L"Kamal Perera"</span>, <span class="code-string">L"0771234567"</span>, 
+                                   <span class="code-string">L"200012345678"</span>, <span class="code-string">L"Anuradhapura"</span>);
+</pre>
+<p>
+  <strong>Explanation:</strong> Here, <code>session</code> and <code>custObj</code> are real objects created in memory with specific personal values.
+</p>
+
+<h3>3.3 Pillar 3: Encapsulation</h3>
+<div class="card">
+  <strong>Concept:</strong> Encapsulation keeps internal data safe by making fields <code>private</code> and allowing access only through controlled <code>public</code> properties (getters/setters).
+</div>
+<p><strong>Code Example from <code>Models.h</code>:</strong></p>
+<pre>
+<span class="code-keyword">public ref class</span> <span class="code-type">Person</span> <span class="code-keyword">abstract</span>
+{
+<span class="code-keyword">private</span>:
+    <span class="code-comment">// Private fields: cannot be modified directly from outside</span>
+    <span class="code-keyword">int</span> id;
+    <span class="code-type">String</span>^ name;
+    <span class="code-type">String</span>^ contact;
+    <span class="code-type">String</span>^ nic;
+
+<span class="code-keyword">public</span>:
+    <span class="code-comment">// Controlled public property for Contact</span>
+    <span class="code-keyword">property</span> <span class="code-type">String</span>^ Contact
+    {
+        <span class="code-type">String</span>^ <span class="code-keyword">get</span>() { <span class="code-keyword">return</span> contact; }
+        <span class="code-keyword">void set</span>(<span class="code-type">String</span>^ value) 
+        { 
+            <span class="code-keyword">if</span> (!<span class="code-type">String</span>::IsNullOrWhiteSpace(value))
+                contact = value; 
+        }
+    }
+};
+</pre>
+<p>
+  <strong>Explanation:</strong> Other parts of the program cannot accidentally corrupt <code>contact</code> or <code>name</code> because the variables are private. They can only be accessed through safe properties.
+</p>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 4: OOP WORKED EXAMPLES (PART 2)
+=========================================== -->
+<h3>3.4 Pillar 4: Abstraction</h3>
+<div class="card">
+  <strong>Concept:</strong> Abstraction hides complex internal implementation details and shows only the essential interface to the user.
+</div>
+<p><strong>Code Example 1 (Abstract Class &amp; Pure Virtual Method in <code>Models.h</code>):</strong></p>
+<pre>
+<span class="code-keyword">public ref class</span> <span class="code-type">Person</span> <span class="code-keyword">abstract</span>
+{
+<span class="code-keyword">public</span>:
+    <span class="code-comment">// Pure abstract method: enforces every child class to implement its own role logic</span>
+    <span class="code-keyword">virtual</span> <span class="code-type">String</span>^ GetRoleDescription() <span class="code-keyword">abstract</span>;
+};
+</pre>
+
+<p><strong>Code Example 2 (Hiding Database Complexity in <code>DatabaseService.h</code>):</strong></p>
+<pre>
+<span class="code-comment">// In the UI form, the developer simply calls this one-line abstraction:</span>
+<span class="code-type">DataTable</span>^ dt = <span class="code-type">DatabaseService</span>::ExecuteQuery(
+    <span class="code-string">"SELECT * FROM repair_jobs WHERE status = @st"</span>, params);
+</pre>
+<p>
+  <strong>Explanation:</strong> The UI form does not know how connection strings, MySQL sockets, open/close connections, or command objects work. All of that complex low-level work is completely hidden behind <code>DatabaseService</code>.
+</p>
+
+<h3>3.5 Pillar 5: Inheritance</h3>
+<div class="card">
+  <strong>Concept:</strong> Inheritance allows a new class (child class) to inherit variables and methods from an existing class (parent class), avoiding duplicate code.
+</div>
+<p><strong>Code Example from <code>Models.h</code>:</strong></p>
+<pre>
+<span class="code-comment">// Employee inherits common personal attributes from Person base class</span>
+<span class="code-keyword">public ref class</span> <span class="code-type">Employee</span> : <span class="code-keyword">public</span> <span class="code-type">Person</span>
+{
+<span class="code-keyword">private</span>:
+    <span class="code-type">String</span>^ role;
+    <span class="code-type">String</span>^ username;
+    <span class="code-keyword">bool</span> isActive;
+
+<span class="code-keyword">public</span>:
+    <span class="code-comment">// Calls the base Person constructor using : Person(id, name, contact, nic)</span>
+    <span class="code-type">Employee</span>(<span class="code-keyword">int</span> id, <span class="code-type">String</span>^ name, <span class="code-type">String</span>^ contact, <span class="code-type">String</span>^ nic, 
+             <span class="code-type">String</span>^ role, <span class="code-type">String</span>^ username, <span class="code-keyword">bool</span> isActive)
+        : <span class="code-type">Person</span>(id, name, contact, nic)
+    {
+        <span class="code-keyword">this</span>->role = role;
+        <span class="code-keyword">this</span>->username = username;
+        <span class="code-keyword">this</span>->isActive = isActive;
+    }
+};
+</pre>
+<p>
+  <strong>Explanation:</strong> Both <code>Customer</code> and <code>Employee</code> inherit <code>id</code>, <code>name</code>, <code>contact</code>, and <code>nic</code> directly from <code>Person</code> without having to write those fields twice.
+</p>
+
+<h3>3.6 Pillar 6: Polymorphism</h3>
+<div class="card">
+  <strong>Concept:</strong> Polymorphism means "many forms". It allows derived classes to provide their own version of a virtual method using the <code>override</code> keyword, called dynamically at runtime.
+</div>
+<p><strong>Code Example from <code>Models.h</code>:</strong></p>
+<pre>
+<span class="code-comment">// 1. Customer provides its own implementation</span>
+<span class="code-keyword">virtual</span> <span class="code-type">String</span>^ <span class="code-type">Customer</span>::GetRoleDescription() <span class="code-keyword">override</span>
+{
+    <span class="code-keyword">return</span> <span class="code-string">L"Client / Device Owner requiring phone hardware or software servicing."</span>;
+}
+
+<span class="code-comment">// 2. Employee provides a completely different implementation of the same method</span>
+<span class="code-keyword">virtual</span> <span class="code-type">String</span>^ <span class="code-type">Employee</span>::GetRoleDescription() <span class="code-keyword">override</span>
+{
+    <span class="code-keyword">return</span> <span class="code-type">String</span>::Format(<span class="code-string">L"Internal Staff Member operating under role: {0}"</span>, role);
+}
+
+<span class="code-comment">// 3. Runtime Polymorphic Behavior:</span>
+<span class="code-type">Person</span>^ personRef = <span class="code-keyword">gcnew</span> <span class="code-type">Employee</span>(1, <span class="code-string">L"Admin"</span>, <span class="code-string">L"0770000000"</span>, <span class="code-string">L"199000000000"</span>, 
+                                    <span class="code-string">L"Admin"</span>, <span class="code-string">L"admin"</span>, <span class="code-keyword">true</span>);
+<span class="code-type">String</span>^ desc = personRef->GetRoleDescription(); <span class="code-comment">// Calls Employee's method dynamically</span>
+</pre>
+<p>
+  <strong>Explanation:</strong> Even though <code>personRef</code> is a base <code>Person^</code> pointer, the program calls the specific <code>Employee</code> method at runtime.
+</p>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 5: CLASS DIAGRAM
+=========================================== -->
+<h2>4. Object-Oriented Class Diagram</h2>
+<p>
+  The class diagram below represents the complete object-oriented structure of FixSphere, showing inheritance, encapsulation, abstract methods, and relationships.
+</p>
+
+<div class="diagram-box">
++---------------------------------------------------------------------------------+
+|                                 &lt;&lt;abstract&gt;&gt;                                    |
+|                                    Person                                       |
++---------------------------------------------------------------------------------+
+| - id: int                                                                       |
+| - name: String^                                                                 |
+| - contact: String^                                                              |
+| - nic: String^                                                                  |
++---------------------------------------------------------------------------------+
+| + Person(id: int, name: String^, contact: String^, nic: String^)                |
+| + Id: int { get; set; }                                                         |
+| + Name: String^ { get; set; }                                                   |
+| + Contact: String^ { get; set; }                                                |
+| + Nic: String^ { get; set; }                                                    |
+| + GetRoleDescription(): String^ [abstract]                                      |
+| + GetSummary(): String^ [virtual]                                               |
++---------------------------------------+-----------------------------------------+
+                                        |
+                     +------------------+------------------+
+                     |  (Inheritance)                      |  (Inheritance)
+                     v                                     v
++--------------------+----------------+   +----------------+---------------------+
+|                Customer             |   |               Employee               |
++-------------------------------------+   +--------------------------------------+
+| - address: String^                  |   | - role: String^                      |
+|                                     |   | - username: String^                  |
+|                                     |   | - isActive: bool                     |
++-------------------------------------+   +--------------------------------------+
+| + Customer(...)                     |   | + Employee(...)                      |
+| + Address: String^ { get; set; }    |   | + Role: String^ { get; set; }        |
+| + GetRoleDescription(): String^ [ov]|   | + Username: String^ { get; set; }    |
+| + GetSummary(): String^ [override]  |   | + IsActive: bool { get; set; }       |
++-------------------------------------+   | + GetRoleDescription(): String^ [ov] |
+                                          | + GetSummary(): String^ [override]   |
+                                          +--------------------------------------+
+
++---------------------------------------+   +------------------------------------+
+|              UserSession              |   |          DatabaseService           |
++---------------------------------------+   +------------------------------------+
+| + EmployeeId: int                     |   | - connectionString: String^        |
+| + FullName: String^                   |   +------------------------------------+
+| + Username: String^                   |   | + InitializeConnectionString()     |
+| + Role: String^                       |   | + GetConnection(): MySqlConnection |
+| + CurrentUser: UserSession^ [static]  |   | + ExecuteQuery(...): DataTable^    |
++---------------------------------------+   | + ExecuteNonQuery(...): int        |
+| + IsLoggedIn(): bool                  |   | + HashPassword(raw: String^): Str  |
+| + CanManageCustomers(): bool          |   +------------------------------------+
+| + CanCreateJobs(): bool               |
+| + CanUpdateJobStatus(): bool          |
+| + CanAssignRepairer(): bool           |
+| + CanDeleteJobs(): bool               |
++---------------------------------------+
+
++---------------------------------------+   +------------------------------------+
+|               LoginForm               |   |              MainForm              |
+|          &lt;&lt;System::Windows::Forms&gt;&gt;   |   |        &lt;&lt;System::Windows::Forms&gt;&gt;  |
++---------------------------------------+   +------------------------------------+
+| - txtUsername: TextBox^               |   | - pnlSidebar: Panel^               |
+| - txtPassword: TextBox^               |   | - dgvJobs: DataGridView^           |
+| - btnSignIn: Button^                  |   | - dgvCustomers: DataGridView^      |
++---------------------------------------+   +------------------------------------+
+| + btnSignIn_Click(...)                |   | + ApplyRoleSecurity()              |
++---------------------------------------+   | + LoadDashboardData()              |
+                                            | + btnJobSave_Click(...)            |
+                                            | + btnExportReport_Click(...)       |
+                                            +------------------------------------+
+</div>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 6: DATABASE & CRUD OPERATIONS
+=========================================== -->
+<h2>5. Real MySQL Database Connection &amp; Full CRUD Implementation</h2>
+<p>
+  The assignment mandates connecting to a real database (MySQL) and demonstrating full <strong>CRUD (Create, Read, Update, Delete)</strong> operations across at least two record types. FixSphere manages three distinct tables:
+</p>
+
+<h3>5.1 Relational Database Schema</h3>
+<pre>
+[customers] 1 &lt;------------------&gt;&gt; &infin; [repair_jobs] &infin; &lt;&lt;------------------&gt; 1 [employees]
+(customer_id PK)                  (job_id PK)                        (emp_id PK)
+</pre>
+
+<h3>5.2 Demonstration of Full CRUD Operations</h3>
+<table>
+  <thead>
+    <tr>
+      <th style="width: 15%;">Record Type</th>
+      <th style="width: 21%;">CREATE (Add)</th>
+      <th style="width: 21%;">READ (View &amp; Search)</th>
+      <th style="width: 21%;">UPDATE (Edit)</th>
+      <th style="width: 22%;">DELETE (Remove)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>1. Customers</strong></td>
+      <td>Adds new customer with Name, Contact (10 digits), unique NIC, and Address.</td>
+      <td>Real-time search by Customer Name, Phone, or NIC in <code>DataGridView</code>.</td>
+      <td>Updates customer address and contact number directly from form.</td>
+      <td>Admin can safely delete customer records with relational integrity checks.</td>
+    </tr>
+    <tr>
+      <td><strong>2. Repair Jobs</strong></td>
+      <td>Registers broken device intake (Phone model, issue description, status: <code>Pending</code>).</td>
+      <td>Filter jobs by status tabs (Pending, In Progress, Finished) or search by phone model.</td>
+      <td>Update repair status, diagnostic notes, assign technician, and enter repair cost.</td>
+      <td>Admin can remove cancelled or duplicate repair job tickets.</td>
+    </tr>
+    <tr>
+      <td><strong>3. Employees</strong></td>
+      <td>Registers staff members with SHA-256 hashed password and active role.</td>
+      <td>Admin views active staff list and assigned job counts.</td>
+      <td>Edit employee contact info and activate/deactivate accounts.</td>
+      <td>Soft deletion by toggling <code>is_active = 0</code> to preserve history.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>5.3 Sri Lankan Rupees (LKR) Financial Calculations</h3>
+<p>
+  In accordance with business requirements, all repair costs and monthly financial revenue reports are strictly calculated and displayed in <strong>Sri Lankan Rupees (LKR)</strong>:
+</p>
+<pre>
+<span class="code-comment">// SQL Query calculating monthly revenue exclusively for Finished jobs in LKR</span>
+SELECT COALESCE(SUM(cost), 0) AS total_revenue 
+FROM repair_jobs 
+WHERE status = 'Finished' 
+  AND MONTH(COALESCE(finished_at, created_at)) = @selectedMonth
+  AND YEAR(COALESCE(finished_at, created_at)) = @selectedYear;
+
+<span class="code-comment">// Formatted in C++/CLI UI:</span>
+lblMonthlyIncome->Text = String::Format(L"LKR {0:N2}", totalRevenue);
+</pre>
+<p>
+  <strong>Business Rule:</strong> Only jobs with status <code>Finished</code> are counted towards monthly income. Jobs that are <code>Pending</code>, <code>In Progress</code>, or <code>Couldn't Repair</code> are strictly excluded or have a cost of <code>LKR 0.00</code>.
+</p>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 7: MULTI-SCREEN GUI OVERVIEW
+=========================================== -->
+<h2>6. Graphical User Interface (GUI) Screens</h2>
+<p>
+  The assignment requires a minimum of <strong>3 screens built in Visual Studio</strong>. FixSphere features a clean, responsive desktop interface with <strong>6 functional views</strong>:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 25%;">Screen / View</th>
+      <th style="width: 25%;">Primary Purpose</th>
+      <th style="width: 50%;">User Controls &amp; Implemented Features</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Screen 1: Sign-In Authentication</strong><br>(<code>LoginForm</code>)</td>
+      <td>Secure employee sign-in</td>
+      <td>
+        &bull; Text boxes for username and password.<br>
+        &bull; Secure SHA-256 password hashing.<br>
+        &bull; Checks active employee status in MySQL.<br>
+        &bull; Clean ASCII title: <em>FixSphere - Employee Sign In</em>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Screen 2: Executive Dashboard</strong><br>(<code>MainForm</code> Tab 1)</td>
+      <td>Business overview</td>
+      <td>
+        &bull; Real-time statistic metric cards.<br>
+        &bull; Total Registered Customers.<br>
+        &bull; Active Pending and In-Progress repair count.<br>
+        &bull; Current Month Revenue formatted in <strong>LKR</strong>.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Screen 3: Customer Management</strong><br>(<code>MainForm</code> Tab 2)</td>
+      <td>Client records</td>
+      <td>
+        &bull; Customer intake form (Name, Contact, NIC, Address).<br>
+        &bull; Interactive search bar with instant DataGridView filtering.<br>
+        &bull; Save, Update, and Clear buttons with input validation.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Screen 4: Repair Jobs Intake &amp; Workflow</strong><br>(<code>MainForm</code> Tab 3)</td>
+      <td>Core repair operations</td>
+      <td>
+        &bull; Intake fields: Phone Model, Defect Details, Cost (LKR).<br>
+        &bull; Status Dropdown (<code>Pending</code>, <code>In Progress</code>, <code>Finished</code>, <code>Couldn't Repair</code>).<br>
+        &bull; Repairer assignment dropdown (Admin-only access).<br>
+        &bull; Role-filtered grid (Repairers only see their assigned devices).
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Screen 5: Employee Administration</strong><br>(<code>MainForm</code> Tab 4)</td>
+      <td>Staff management (Admin only)</td>
+      <td>
+        &bull; Add new staff (Name, NIC, Contact, Address, Role).<br>
+        &bull; Role selector (Admin, Checker, Repairer).<br>
+        &bull; Password setup with SHA-256 generation.
+      </td>
+    </tr>
+    <tr>
+      <td><strong>Screen 6: Financial Reports &amp; CSV Export</strong><br>(<code>MainForm</code> Tab 5)</td>
+      <td>Revenue accounting</td>
+      <td>
+        &bull; Month and Year selection dropdowns.<br>
+        &bull; Dynamic revenue sum of all Finished jobs in LKR.<br>
+        &bull; <strong>Export to CSV</strong> button for spreadsheet auditing.
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>6.1 Role-Based Access Control Matrix (RBAC)</h3>
+<table>
+  <thead>
+    <tr>
+      <th>Feature / Operation</th>
+      <th style="text-align: center;">Administrator</th>
+      <th style="text-align: center;">Checker (Front-Desk)</th>
+      <th style="text-align: center;">Repairer (Technician)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Register New Customers</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: red;">No (Hidden)</td>
+    </tr>
+    <tr>
+      <td>Create New Repair Job Intake</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: red;">No (Hidden)</td>
+    </tr>
+    <tr>
+      <td>Assign Repair Jobs to Technicians</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: red;">No (Restricted)</td>
+      <td style="text-align: center; color: red;">No (Restricted)</td>
+    </tr>
+    <tr>
+      <td>Update Job Status &amp; Cost</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Any Job</td>
+      <td style="text-align: center; color: red;">No (Read-Only)</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Only Assigned Jobs</td>
+    </tr>
+    <tr>
+      <td>Manage Employees &amp; View Reports</td>
+      <td style="text-align: center; color: green; font-weight: bold;">Yes</td>
+      <td style="text-align: center; color: red;">No (Hidden)</td>
+      <td style="text-align: center; color: red;">No (Hidden)</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="page-break"></div>
+
+<!-- ==========================================
+     PAGE 8: CHECKLIST & CONCLUSION
+=========================================== -->
+<h2>7. Final Submission Verification Checklist</h2>
+<p>
+  This checklist verifies that every instruction and requirement in the university assignment brief has been satisfied:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="width: 5%;">Status</th>
+      <th style="width: 35%;">Requirement from Assignment PDF</th>
+      <th style="width: 60%;">Project Implementation Proof</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>Team of 5 Registered via Google Form</strong></td>
+      <td>All 5 members registered before September 17, 2026. Credentials detailed on Page 1.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>Unique Small Business Scenario</strong></td>
+      <td>FixSphere: Mobile Phone Repair Center Management System. Distinct from typical retail/pharmacy projects.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>2+ Classes using all 6 OOP Concepts</strong></td>
+      <td>Implemented custom domain classes: <code>Person</code>, <code>Customer</code>, <code>Employee</code>, demonstrating Class, Object, Encapsulation, Abstraction, Inheritance, and Polymorphism.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>3+ GUI Screens in Visual Studio</strong></td>
+      <td>Built with C++/CLI Windows Forms: Login Form + 5 integrated views in MainForm (Dashboard, Customers, Jobs, Employees, Reports).</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>Real MySQL Database with Full CRUD</strong></td>
+      <td>MySQL 8.0 connection via <code>DatabaseService</code> supporting Create, Read, Update, and Delete across <code>customers</code>, <code>repair_jobs</code>, and <code>employees</code>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>Report Maximum 8 Pages</strong></td>
+      <td>This report is formatted to fit within the 8-page limit, containing all required diagrams and worked examples.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>Public GitHub Repository URL Included</strong></td>
+      <td>Public repository: <a href="https://github.com/Ravindu2k4/Fixsphere">https://github.com/Ravindu2k4/Fixsphere</a> containing full source code and SQL setup script.</td>
+    </tr>
+    <tr>
+      <td style="text-align: center; font-weight: bold; color: green;">&check;</td>
+      <td><strong>5-Minute Live Demo Video on YouTube</strong></td>
+      <td>Demonstration recorded following the 5-minute dubbing script, uploaded as Unlisted, link provided in report header.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>8. Conclusion</h2>
+<p>
+  <strong>FixSphere</strong> delivers a practical software solution for mobile phone repair centers while demonstrating academic mastery of Object-Oriented Programming.
+  By separating personal identities into an abstract <code>Person</code> base class and extending them into <code>Customer</code> and <code>Employee</code> child classes, the system showcases clean inheritance, encapsulation, and runtime polymorphism.
+  Furthermore, by abstracting database logic inside <code>DatabaseService</code>, the Windows Forms user interface remains responsive, secure, and maintainable.
+  With full role-based access control and financial reporting in Sri Lankan Rupees (LKR), the application fulfills all requirements specified for module <strong>ICT 1306</strong>.
+</p>
+
+</body>
+</html>
